@@ -349,27 +349,27 @@
                     unityI.SendMessage('VKSDK', 'RewardGetting', JSON.stringify(data.result));
                 })
             }
-            function shareLinkToFriend() {
-                vkBridge.send('VKWebAppShowInviteBox', {
-                    requestKey: 'key-12345' /* Необязательный параметр. Ключ приглашения. */
-                })
-                    .then((data) => {
-                        if (data.success) {
-                            // Приглашение выслано ...
-                            // ...
+  //          function shareLinkToFriend() {
+  //              vkBridge.send('VKWebAppShowInviteBox', {
+  //                  requestKey: 'key-12345' /* Необязательный параметр. Ключ приглашения. */
+  //              })
+  //                  .then((data) => {
+  //                      if (data.success) {
+  //                          // Приглашение выслано ...
+  //                          // ...
 
-                            // Эти пользователи не получили сообщение
-                            // console.log('Приглашение не было отослано', data.notSentIds );
-                        }
-                    })
-                    .catch((e) => {
-                        let { error_code, error_reason } = e.error_data;
-                        if (error_code == 4 && error_reason == 'User denied') {
-      // Пользователь нажал «Отмена» в диалоге
+  //                          // Эти пользователи не получили сообщение
+  //                          // console.log('Приглашение не было отослано', data.notSentIds );
+  //                      }
+  //                  })
+  //                  .catch((e) => {
+  //                      let { error_code, error_reason } = e.error_data;
+  //                      if (error_code == 4 && error_reason == 'User denied') {
+  //    // Пользователь нажал «Отмена» в диалоге
       
-    }  
-  });
-            }
+  //  }  
+  //});
+  //          }
 
 
         </script>
