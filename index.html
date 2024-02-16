@@ -349,6 +349,13 @@
                     unityI.SendMessage('VKSDK', 'RewardGetting', JSON.stringify(data.result));
                 })
             }
+            function shareLinkToFriend() {
+                vkBridge.send('VKWebAppShowInviteBox').then(data => {
+                    console.log(data);
+                });
+            }
+
+
   //          function shareLinkToFriend() {
   //              vkBridge.send('VKWebAppShowInviteBox', {
   //                  requestKey: 'key-12345' /* Необязательный параметр. Ключ приглашения. */
