@@ -281,12 +281,12 @@
 
             // Загрузка файлов
             var unityLoader = document.createElement("script");
-            unityLoader.src = "Build/HighwayRacerRusVKSDK.loader.js";
+            unityLoader.src = "Build/HighwayRacerVk.loader.js";
             unityLoader.onload = () => {
                 createUnityInstance(canvas, {
-                    dataUrl: "Build/HighwayRacerRusVKSDK.data.unityweb",
-                    frameworkUrl: "Build/HighwayRacerRusVKSDK.framework.js.unityweb",
-                    codeUrl: "Build/HighwayRacerRusVKSDK.wasm.unityweb",
+                    dataUrl: "Build/HighwayRacerVk.data.unityweb",
+                    frameworkUrl: "Build/HighwayRacerVk.framework.js.unityweb",
+                    codeUrl: "Build/HighwayRacerVk.wasm.unityweb",
                     streamingAssetsUrl: "StreamingAssets",
                     companyName: "DefaultCompany",
                     productName: "Highway Racer",
@@ -306,8 +306,6 @@
             };
             document.body.appendChild(unityLoader);
         </script>
-        </script>
-
         <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 
         <script type="text/javascript">
@@ -354,31 +352,6 @@
                     console.log(data);
                 });
             }
-
-
-  //          function shareLinkToFriend() {
-  //              vkBridge.send('VKWebAppShowInviteBox', {
-  //                  requestKey: 'key-12345' /* Необязательный параметр. Ключ приглашения. */
-  //              })
-  //                  .then((data) => {
-  //                      if (data.success) {
-  //                          // Приглашение выслано ...
-  //                          // ...
-
-  //                          // Эти пользователи не получили сообщение
-  //                          // console.log('Приглашение не было отослано', data.notSentIds );
-  //                      }
-  //                  })
-  //                  .catch((e) => {
-  //                      let { error_code, error_reason } = e.error_data;
-  //                      if (error_code == 4 && error_reason == 'User denied') {
-  //    // Пользователь нажал «Отмена» в диалоге
-      
-  //  }  
-  //});
-  //          }
-
-
         </script>
 </body>
 </html>
