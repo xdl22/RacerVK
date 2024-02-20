@@ -310,7 +310,7 @@
             document.body.appendChild(unityLoader);
         </script>
 
-        <audio id="my_audio" src="some-song.mp3" controls>
+        
          <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 
             <script type="text/javascript">
@@ -357,20 +357,14 @@
                         console.log(data);
                     });
                 }
-                function eventHandler(e) {
+                document.addEventListener('visibilitychange', eventHandler);
 
-                    const { type, data } = e.detail;
-                    switch (type) {
-                        case 'VKWebAppViewHide':
-                            my_audio.pause(); // Останавливаем воспроизведение аудио
-                            break;
-                        case 'VKWebAppViewRestore':
-                            my_audio.play(); // Запускаем воспроизведение
-                            break;
-
-                        // Обработчики других событий
-                        // ...
-
+                function eventHandler() {
+                    // Проверяем, скрыта ли страница
+                    if (document.hidden) {
+                        my_audio.pause(); // Останавливаем воспроизведение аудио 
+                    } else {
+                        my_audio.play(); // Запускаем воспроизведение
                     }
                 }
             </script>
