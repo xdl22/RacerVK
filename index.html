@@ -357,26 +357,8 @@
                         console.log(data);
                     });
                 }
-                bridge.subscribe(eventHandler);
-
-                // ...
-
-                function eventHandler(e) {
-
-                    const { type, data } = e.detail;
-                    switch (type) {
-                        case 'VKWebAppViewHide':
-                            my_audio.pause(); // Останавливаем воспроизведение аудио
-                            break;
-                        case 'VKWebAppViewRestore':
-                            my_audio.play(); // Запускаем воспроизведение
-                            break;
-
-                        // Обработчики других событий
-                        // ...
-
-                    }
-                }
+               
+      
             </script>
 </body>
 </html>
