@@ -281,12 +281,12 @@
 
             // Загрузка файлов
             var unityLoader = document.createElement("script");
-            unityLoader.src = "Build/Racer.loader.js";
+            unityLoader.src = "Build/racer.loader.js";
             unityLoader.onload = () => {
                 createUnityInstance(canvas, {
-                    dataUrl: "Build/Racer.data.unityweb",
-                    frameworkUrl: "Build/Racer.framework.js.unityweb",
-                    codeUrl: "Build/Racer.wasm.unityweb",
+                    dataUrl: "Build/racer.data.unityweb",
+                    frameworkUrl: "Build/racer.framework.js.unityweb",
+                    codeUrl: "Build/racer.wasm.unityweb",
                     streamingAssetsUrl: "StreamingAssets",
                     companyName: "DefaultCompany",
                     productName: "Highway Racer",
